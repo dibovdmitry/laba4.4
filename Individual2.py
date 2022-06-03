@@ -17,9 +17,6 @@ class Airplanes:
         self.line = line
 
     def select_airplane(self, race):
-        """
-        Выбрать человека с заданной фамилией.
-        """
         print(self.line)
         print(
             '| {:^4} | {:^30} | {:^20} | {:^20} |'.format(
@@ -30,10 +27,8 @@ class Airplanes:
             )
         )
         print(self.line)
-        # Инициализировать счетчик.
         sel = input('Введите номер вашего самолёта: ')
         count = 0
-        # Проверить людей из списка.
         for i, num in enumerate(race, 1):
             if sel == num['path']:
                 count += 1
@@ -46,13 +41,10 @@ class Airplanes:
 
         print(self.line)
         if count == 0:
-            print('Никто не найден')
+            print('Рейсы не найдены')
         print(self.line)
 
     def display(self, race):
-        """
-        Отобразить список людей.
-        """
         print(self.line)
         print(
             '| {:^4} | {:^30} | {:^20} | {:^20} |'.format(
