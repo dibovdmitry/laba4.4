@@ -30,10 +30,8 @@ class Airplanes:
             )
         )
         print(self.line)
-        # Инициализировать счетчик.
         sel = input('Введите номер вашего самолёта: ')
         count = 0
-        # Проверить людей из списка.
         for i, num in enumerate(race, 1):
             if sel == num['path']:
                 count += 1
